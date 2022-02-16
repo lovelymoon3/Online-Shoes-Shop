@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Online Shoes Order</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Enriqueta:wght@600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="javascripts/shoes_shop.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <br>
+      <div id="title">
+        <h1>Online Shoes Shop</h1>
+      </div>
+    </header>
+
+  <div id="app">
+    <div id="search" v-if="show_main">
+      <br>
+      <div id="box">
+
+        <div id="input_container">
+            <h2>You can search shoes!</h2>
+            <p class="p1">From very gorgeous shoes to very cozy shoes</p>
+
+            <form>
+                <div class="input_box">
+                    <select id="s_size">
+                      <option value="" disabled selected>Shoes Size</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                    </select>
+                    <select id="s_style">
+                      <option value="" disabled selected>Shoes Style</option>
+                      <option value="sneakers">sneakers</option>
+                      <option value="highheels">high heels</option>
+                      <option value="thongs">thongs</option>
+                      <option value="flats">flats</option>
+                      <option value="boots">boots</option>
+                    </select>
+                    <select id="brand">
+                      <option value="" disabled selected>Shoes Brands</option>
+                      <option value="Abrand">A brand</option>
+                      <option value="Bbrand">B brand</option>
+                      <option value="Cbrand">C brand</option>
+                    </select>
+                    <select id="price">
+                      <option value="" disabled selected>Price FROM</option>
+                      <option value="0">From $0</option>
+                      <option value="100">From $100</option>
+                      <option value="200">From $200</option>
+                      <option value="300">From $300</option>
+                    </select>
+                    <select id="price2">
+                      <option value="" disabled selected>To</option>
+                      <option value="100">To $100</option>
+                      <option value="200">To $200</option>
+                      <option value="200">To $300</option>
+                      <option value="400">To $400</option>
+                    </select>
+
+                    <button type="button" id="search_btn" onclick="search(); vueinst.show_main = false;">Search</button>
+                    <hr>
+                    <!--<h3>Here are all the lists of shoes in our shop!</h3>-->
+                </div>
+
+            </form>
+        </div>
+
+        </div>
+    </div>
+
+    <section id="section" v-else>
+      <Br>
+      <div id="box">
+        <div id="input_container">
+            <button type="button" id="back_btn" onclick="vueinst.show_main = true;">Back</button>
+             <h2>Here is the list of Shoes you are looking for!</h2>
+          <table>
+            <thead>
+              <tr>
+                <!--<th>Shoes ID</th>-->
+                <th>Shoes Size</th>
+                <th>Shoes Style</th>
+                <th>Shoes Brand</th>
+                <th>Shoes Price</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  </main>
+</body>
+
+<footer>
+  <p>Copyright © 2021 k shoes shop</p>
+</footer>
+
+</html>
